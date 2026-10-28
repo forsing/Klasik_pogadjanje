@@ -3,14 +3,7 @@
 
 
 """
-V3: learned EARAC codebook, exact conditional seven-number distribution.
-Known historical bits are encoded. Next-draw likelihood trains the codebook.
-The communication protocol itself does not provide future information.
-Every query uses a freshly prepared singlet. All Born probabilities are exact.
-No random sampling, row shuffling, classifiers or cosmetic filters.
-Only previous-draw bits enter a sample; all chronological transitions train.
-Regularization controls codebook changes from its initial angular setting.
-The initial setting is an optimization starting point, not an assumed draw law.
+V3: EARAC, exact conditional seven-number distribution.
 """
 
 
@@ -42,15 +35,15 @@ DRAW_SIZE = 7
 
 FILES = (
     (
-        Path("/Users/4c/Desktop/GHQ/data/loto7_4710_k86.csv"),
+        Path("/data/loto7_4710_k86.csv"),
         4710,
     ),
     (
-        Path("/Users/4c/Desktop/GHQ/data/loto7_4710_k86_loto_2977.csv"),
+        Path("/data/loto7_4710_k86_loto_2977.csv"),
         2977,
     ),
     (
-        Path("/Users/4c/Desktop/GHQ/data/loto7_4710_k86_loto_plus_1733.csv"),
+        Path("/data/loto7_4710_k86_loto_plus_1733.csv"),
         1733,
     ),
 )
@@ -1708,7 +1701,7 @@ ZAVRŠNI REZULTATI V3
 Modelna verovatnoća nije potvrđena verovatnoća stvarnog izvlačenja.
 
 CSV: loto7_4710_k86.csv
-NEXT: 03 08 10 16 21 23 39
+NEXT: 03 x 10 y 21 z 39
 Validacioni NLL: 16.54854085
 Odvojeni test NLL: 16.54833354
 Prosečno pogodaka na odvojenom testu: 1.254777
@@ -1718,7 +1711,7 @@ Normalizaciona konstanta P(broj jedinica=7): 0.14533688696
 Promena uslovnih uključnih verovatnoća kroz kontekst: 2.194204e-03
 
 CSV: loto7_4710_k86_loto_2977.csv
-NEXT: 10 13 16 21 22 26 39
+NEXT: 10 x 16 y 22 z 39
 Validacioni NLL: 16.54849212
 Odvojeni test NLL: 16.54796810
 Prosečno pogodaka na odvojenom testu: 1.362416
@@ -1728,7 +1721,7 @@ Normalizaciona konstanta P(broj jedinica=7): 0.145336559323
 Promena uslovnih uključnih verovatnoća kroz kontekst: 2.245957e-03
 
 CSV: loto7_4710_k86_loto_plus_1733.csv
-NEXT: 04 07 11 18 23 25 29
+NEXT: 04 x 11 y 23 z 29
 Validacioni NLL: 16.54851469
 Odvojeni test NLL: 16.54960932
 Prosečno pogodaka na odvojenom testu: 1.230548
@@ -1751,9 +1744,9 @@ Konkretna izmena: umesto hiljada parametara iz V2, uči se 208 parametara EARAC 
 Singlet, Aliceina poruka i Bobovo merenje ostaju glavni račun. 
 
 CSV	    Dobijeni NEXT	        Prosečno pogodaka na testu
-4710	03 08 10 16 21 23 39	1,255
-2977	10 13 16 21 22 26 39	1,362
-1733	04 07 11 18 23 25 29	1,231
+4710	03 x 10 y 21 z 39	1,255
+2977	10 x 16 y 22 z 39	1,362
+1733	04 x 11 y 23 z 29	1,231
 
 Prediktivna prednost nije potvrđena. 
 """
