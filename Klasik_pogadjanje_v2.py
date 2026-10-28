@@ -90,15 +90,15 @@ from scipy.optimize import minimize
 
 FILES = (
     (
-        Path("/Users/4c/Desktop/GHQ/data/loto7_4710_k86.csv"),
+        Path("/data/loto7_4710_k86.csv"),
         4710,
     ),
     (
-        Path("/Users/4c/Desktop/GHQ/data/loto7_4710_k86_loto_2977.csv"),
+        Path("/data/loto7_4710_k86_loto_2977.csv"),
         2977,
     ),
     (
-        Path("/Users/4c/Desktop/GHQ/data/loto7_4710_k86_loto_plus_1733.csv"),
+        Path("/data/loto7_4710_k86_loto_plus_1733.csv"),
         1733,
     ),
 )
@@ -2681,7 +2681,7 @@ Modelna verovatnoća pripada naučenom modelu.
 Ona nije potvrđena verovatnoća stvarnog narednog izvlačenja.
 
 CSV: loto7_4710_k86.csv
-NEXT: 03 06 08 10 14 26 29
+NEXT: 03 x 08 y 14 z 29
 Validacioni NLL: 16.91420333
 Odvojeni test NLL: 16.79439308
 Modelna verovatnoća NEXT: 1.23349262802e-06
@@ -2693,7 +2693,7 @@ Raspon kombinacije: 26
 Izbor NEXT: tačan maksimum uslovne raspodele.
 
 CSV: loto7_4710_k86_loto_2977.csv
-NEXT: 01 05 07 13 18 25 34
+NEXT: 01 x 07 y 18 z 34
 Validacioni NLL: 17.19381402
 Odvojeni test NLL: 17.18068961
 Modelna verovatnoća NEXT: 9.84986242863e-07
@@ -2705,7 +2705,7 @@ Raspon kombinacije: 33
 Izbor NEXT: tačan maksimum uslovne raspodele.
 
 CSV: loto7_4710_k86_loto_plus_1733.csv
-NEXT: 08 13 25 28 31 34 39
+NEXT: 08 x 25 y 31 z 39
 Validacioni NLL: 18.91849908
 Odvojeni test NLL: 17.84446058
 Modelna verovatnoća NEXT: 6.35502371102e-06
