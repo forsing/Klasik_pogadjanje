@@ -901,7 +901,7 @@ def main():
     )
 
     say(
-        "Loto 7/39 — V1",
+        "Loto 7/39 — V4",
         "Klasična piramidalna regresija raspodele.",
         "Alice koristi istoriju, Bob binarnu poruku i indeks broja.",
         "Oba moguća bita sabiraju se analitički.",
