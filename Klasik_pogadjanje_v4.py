@@ -20,9 +20,9 @@ from scipy.special import expit, logsumexp
 
 
 FILES = (
-    Path("/Users/4c/Desktop/GHQ/data/loto7_4710_k86.csv"),
-    Path("/Users/4c/Desktop/GHQ/data/loto7_4710_k86_loto_2977.csv"),
-    Path("/Users/4c/Desktop/GHQ/data/loto7_4710_k86_loto_plus_1733.csv"),
+    Path("/data/loto7_4710_k86.csv"),
+    Path("/data/loto7_4710_k86_loto_2977.csv"),
+    Path("/data/loto7_4710_k86_loto_plus_1733.csv"),
 )
 
 NUMBER_COUNT = 39
@@ -988,7 +988,7 @@ if __name__ == "__main__":
 
 
 """
-Loto 7/39 — V1
+Loto 7/39 — V4
 Klasična piramidalna regresija raspodele.
 Alice koristi istoriju, Bob binarnu poruku i indeks broja.
 Oba moguća bita sabiraju se analitički.
@@ -1068,7 +1068,7 @@ Tačna NEXT pretraga: 13000000 / 15380937
 Tačna NEXT pretraga: 14000000 / 15380937
 Tačna NEXT pretraga: 15000000 / 15380937
 
-NEXT loto7_4710_k86.csv: 08 10 11 23 25 26 39
+NEXT loto7_4710_k86.csv: 08 x 11 y 25 z 39
 Log-verovatnoća NEXT: -16.445788097
 Verovatnoća NEXT prema modelu: 7.20584604634e-08
 
@@ -1121,7 +1121,7 @@ Tačna NEXT pretraga: 13000000 / 15380937
 Tačna NEXT pretraga: 14000000 / 15380937
 Tačna NEXT pretraga: 15000000 / 15380937
 
-NEXT loto7_4710_k86_loto_2977.csv: 08 22 23 24 26 38 39
+NEXT loto7_4710_k86_loto_2977.csv: 08 x 23 y 26 z 39
 Log-verovatnoća NEXT: -16.436775652
 Verovatnoća NEXT prema modelu: 7.27108186186e-08
 
@@ -1174,7 +1174,7 @@ Tačna NEXT pretraga: 13000000 / 15380937
 Tačna NEXT pretraga: 14000000 / 15380937
 Tačna NEXT pretraga: 15000000 / 15380937
 
-NEXT loto7_4710_k86_loto_plus_1733.csv: 10 11 12 25 26 27 39
+NEXT loto7_4710_k86_loto_plus_1733.csv: 10 x 12 y 26 z 39
 Log-verovatnoća NEXT: -16.498419751
 Verovatnoća NEXT prema modelu: 6.83639805929e-08
 
@@ -1182,13 +1182,13 @@ Verovatnoća NEXT prema modelu: 6.83639805929e-08
 
 
 ZAVRŠNA TRI NEXT REZULTATA
-loto7_4710_k86.csv: 08 10 11 23 25 26 39
+loto7_4710_k86.csv: 08 x 11 y 25 z 39
 Test NLL: 16.547272099
 Izabrano λ: 0.3
-loto7_4710_k86_loto_2977.csv: 08 22 23 24 26 38 39
+loto7_4710_k86_loto_2977.csv: 08 x 23 y 26 z 39
 Test NLL: 16.547784656
 Izabrano λ: 0.3
-loto7_4710_k86_loto_plus_1733.csv: 10 11 12 25 26 27 39
+loto7_4710_k86_loto_plus_1733.csv: 10 x 12 y 26 z 39
 Test NLL: 16.548396941
 Izabrano λ: 3
 
@@ -1209,7 +1209,7 @@ Piramidalna konstrukcija jeste konkretna ideja: parove informacija sažima kroz 
 
 Za Loto vredi piramidalno sažimanje istorije i dekodiranje po traženom broju. Predviđanje sledećeg kola zahteva novo učenje istorijskih prelaza i zajedničku raspodelu tačno sedam brojeva. 
 
-V1 čuva piramidalno sažimanje i jednu binarnu poruku između Alice i Boba. Alice obrađuje prethodna kola. Bob iz poruke određuje raspodelu naredne sedmorke.
+V4 čuva piramidalno sažimanje i jednu binarnu poruku između Alice i Boba. Alice obrađuje prethodna kola. Bob iz poruke određuje raspodelu naredne sedmorke.
 
 Oba moguća bita računaju se analitički, bez slučajnog uzorkovanja. Ovo je klasična komunikaciona arhitekture
 """
